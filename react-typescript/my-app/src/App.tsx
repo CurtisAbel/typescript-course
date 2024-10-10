@@ -1,19 +1,23 @@
 import React from 'react';
-import { ToDoList } from './ToDoList';
+import { ToDoList, NewTodo, TodoListApp } from './components';
+
 const App: React.FC = () => {
-    type Todolist ={
+    type Todolist = {
         id: string;
         task: string;
-    }
+        deadline: string;
+    };
 
     const todos: Todolist[] = [
-        { id: 'task 1', task: 'read book' },
-        { id: 'task 2', task: 'gym' },
-        { id: 'task 3', task: 'code' },
+        { id: 'task 1', task: 'read book', deadline: 'tomorrow' },
+        { id: 'task 2', task: 'gym', deadline: 'tomorrow' },
+        { id: 'task 3', task: 'code', deadline: 'end of the day' },
     ];
     return (
         <div className="App">
-            <ToDoList items={todos} />
+            {/* <NewTodo />
+            <ToDoList items={todos} /> */}
+            <TodoListApp />
         </div>
     );
 };
