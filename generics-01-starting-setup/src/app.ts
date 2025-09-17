@@ -10,12 +10,21 @@
 //   data.split(' ');
 // })
 
-function merge<T, U>(objA: T, objB: U) {
+// function merge<T, U>(objA: T, objB: U) {
 
-  return Object.assign(objA, objB)
+//   return Object.assign(objA, objB)
+
+// }
+
+// const mergedObj = merge<{name: string, hobbies: string[]}, {age: number}>({name: 'Curtis', hobbies:['chess', 'football']}, {age: 30})
+// console.log(merge({name: 'Curtis'}, {age: 30}));
+
+const insertAtBeginning = <T>(array: T[], value: T) => {
+  const newArray = [value, ...array];
+  return newArray;
 
 }
 
-const mergedObj = merge<{name: string, hobbies: string[]}, {age: number}>({name: 'Curtis', hobbies:['chess', 'football']}, {age: 30})
-console.log(merge({name: 'Curtis'}, {age: 30}));
-
+const demoArray: number[] = [1,2,3];
+const updatedArray = insertAtBeginning(demoArray, -1);
+console.log(updatedArray);

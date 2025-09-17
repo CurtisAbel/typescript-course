@@ -15,8 +15,8 @@ const App: React.FC = () => {
     ];
     return (
         <div className="App">
-            {/* <NewTodo />
-            <ToDoList items={todos} /> */}
+            { <NewTodo />
+            <ToDoList items={todos} /> }
             <TodoListApp />
         </div>
     );
